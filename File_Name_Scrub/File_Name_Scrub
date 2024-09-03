@@ -1,0 +1,19 @@
+import os, re
+
+def get_file_names(folder_path):
+    file_names = []
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            file_names.append(file)
+    return file_names
+
+folder_path = r"C:\Users\Meno\Downloads\Hold"
+file_names = get_file_names(folder_path)
+
+# Define the regex pattern to capture the desired part of each file name
+pattern = re.compile(r'.*--(JOB-\d*)_.*')
+
+for file_name in file_names:
+    match = pattern.search(file_name)
+    if match:
+        print(match.group(1))  # Adjust the group index based on your regex pattern
