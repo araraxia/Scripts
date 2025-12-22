@@ -1,0 +1,1 @@
+This is a collection of old scripts that could be be useful to reference in certain scenarios. Some have dependencies not in this repo to run, and are meant for reference only.
